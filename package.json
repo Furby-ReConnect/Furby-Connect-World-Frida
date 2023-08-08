@@ -1,0 +1,19 @@
+{
+  "name": "furby-connect-world-frida",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "frida-compile -o _.js index.ts",
+    "attach": "frida -U \"Furby Connect World\" -l _.js --runtime=v8",
+    "spawn": "frida -U -f \"com.hasbro.FurbyWorldAPPSTORE\" -l _.js --runtime=v8"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "frida-il2cpp-bridge": "^0.8.5"
+  },
+  "devDependencies": {
+    "typescript": "^5.1.6"
+  }
+}
